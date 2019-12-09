@@ -8,7 +8,8 @@ exports.registration_create = function (req, res) {
             email: req.body.email,
             company: req.body.company,
             role: req.body.role,
-            description: req.body.description
+            description: req.body.description,
+            date: req.body.date
         }
     );
 
