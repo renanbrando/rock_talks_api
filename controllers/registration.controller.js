@@ -38,6 +38,14 @@ exports.registration_details = function (req, res) {
     })
 };
 
+// find by email
+exports.registration_details_by_email = function (req, res) {
+    Registration.find({email:req.params.email}).populate('talk').exec(function (err, registrations) {
+        if (err) return res.send(err);
+        res.send(registrations);
+    })
+};
+
 // update
 exports.registration_update = function (req, res) {
     Registration.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, registration) {
