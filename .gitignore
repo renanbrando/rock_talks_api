@@ -1,0 +1,38 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Node specifics
+node_modules/
+uploadedFiles/*.*
+
+# Office temp files
+~*.*
+
+#Webstorm IDE files
+.idea/
+
+#Vagrant Files
+.vagrant/*
+
+
+.vscode/launch.json

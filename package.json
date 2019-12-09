@@ -1,0 +1,31 @@
+{
+  "name": "chuck-norris-api",
+  "version": "1.0.0",
+  "description": "Chuck Norris Jokes API in node.js with mongoose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanbrando/Chuck-Norris-Jokes-API.git"
+  },
+  "keywords": [
+    "Node.js",
+    "MongoDB",
+    "Chuck",
+    "Norris",
+    "API"
+  ],
+  "author": "Renan Ribeiro Brando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renanbrando/Chuck-Norris-Jokes-API/issues"
+  },
+  "homepage": "https://github.com/renanbrando/Chuck-Norris-Jokes-API#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
+  }
+}
