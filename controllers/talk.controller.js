@@ -1,4 +1,5 @@
 const Talk = require('../models/talk.model');
+const Registration = require('../models/registration.model');
 
 exports.talk_create = function (req, res) {
     let talk = new Talk(
@@ -28,6 +29,22 @@ exports.talk_find_all = function (req, res) {
             res.send(err);
         res.send(talks);
     });
+}
+
+// find by email
+exports.talk_details_by_email = function(req, res) {
+    Talk.findById(req.params.id).populate('category').exec(function (err, talk) {
+        if (err) return res.send(err);
+        Registration.countDocuments({email: req.params.email, talk: req.params.id}, function (err, count){
+            console.log(count)
+            if (err) return res.send(err);
+            res.send({
+                ...talk._doc,
+                registered: count > 0
+            });
+        })
+        
+    })
 }
 
 // find by id

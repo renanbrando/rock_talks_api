@@ -8,6 +8,9 @@ router.post('/create', talk_controller.talk_create);
 // find all
 router.get('/find', talk_controller.talk_find_all);
 
+// find with email
+router.get('/find/:id/:email', talk_controller.talk_details_by_email);
+
 // find by id
 router.get('/:id', talk_controller.talk_details);
 
