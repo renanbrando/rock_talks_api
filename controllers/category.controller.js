@@ -1,10 +1,5 @@
 const Category = require('../models/category.model');
 
-// test
-exports.test = function (req, res) {
-    res.send('Greetings from the Test controller!');
-};
-
 exports.category_create = function (req, res) {
     let category = new Category(
         {

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const category = require('./routes/category.route'); 
 const talk = require('./routes/talk.route'); 
+const registration = require('./routes/registration.route'); 
 const app = express();
 
 // Set up mongoose connection
@@ -22,6 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/category', category);
 app.use('/talk', talk);
+app.use('/registration', registration);
 
 let port = process.env.PORT || 8080;
 

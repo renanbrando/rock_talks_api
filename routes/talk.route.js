@@ -2,9 +2,6 @@ const express = require('express');
 const router = express.Router();
 const talk_controller = require('../controllers/talk.controller');
 
-// test
-router.get('/test', talk_controller.test);
-
 // create
 router.post('/create', talk_controller.talk_create);
 

@@ -1,10 +1,5 @@
 const Talk = require('../models/talk.model');
 
-// test
-exports.test = function (req, res) {
-    res.send('Greetings from the Test controller!');
-};
-
 exports.talk_create = function (req, res) {
     let talk = new Talk(
         {
@@ -37,7 +32,7 @@ exports.talk_find_all = function (req, res) {
 
 // find by id
 exports.talk_details = function (req, res) {
-    Talk.findById(req.params.id, function (err, talk) {
+    Talk.findById(req.params.id).populate('category').exec(function (err, talk) {
         if (err) return res.send(err);
         res.send(talk);
     })
