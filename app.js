@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/category', category);
 app.use('/talk', talk);
 
-let port = 4000;
+let port = process.env.PORT || 8080;
 
 app.listen(port, () => {
     console.log('Server is up and running on port numner ' + port);
